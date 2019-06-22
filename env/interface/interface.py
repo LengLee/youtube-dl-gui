@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, uic, QtWidgets, QtGui
-import sys
+import sys, os
 from gui import Ui_MainWindow
 
 #Creating a UI Class for the main window
@@ -11,9 +11,12 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         dbutton = self.pushButton
         dbutton.clicked.connect(self.push)
     
-    #Clicked Test button
+    #Once click, download static Elton John Link
+    #TODO - Assign variable to static link so it can be dynamic and read from the self.plainTextEdit.toPlainText() function
     def push(self):
         print(self.plainTextEdit.toPlainText())
+        os.system("sudo youtube-dl --no-check-certificate -o \"/Users/LengLee/Downloads/%(title)s-%(id)s.%(ext)s\" https://youtu.be/1sioip9Uc4o\\")
+        return None
 
 
 
