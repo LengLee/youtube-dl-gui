@@ -50,16 +50,6 @@
      <string>Download</string>
     </property>
    </widget>
-   <widget class="QTreeView" name="treeView">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>20</y>
-      <width>741</width>
-      <height>241</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
@@ -71,6 +61,16 @@
     </property>
     <property name="text">
      <string>Download Directory</string>
+    </property>
+   </widget>
+   <widget class="QTreeView" name="treeView">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>10</y>
+      <width>741</width>
+      <height>251</height>
+     </rect>
     </property>
    </widget>
   </widget>
