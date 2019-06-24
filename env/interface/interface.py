@@ -18,8 +18,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
         #Set the Model(FileSystem) to display in your treeview
         treeview.setModel(self.treemodel)
-        
-
+        treeview.doubleClicked.connect(self.treeviewmouseDoubleClickEvent)
 
         #Connecting the push button for the download
         downloadbutton = self.pushButton
@@ -28,8 +27,9 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
 
     #Select directory function
-    def directoryselect(self):
-        #file = os.
+    def treeviewmouseDoubleClickEvent(self, event):
+        dir = os.getcwd() 
+        print("You are in ", str(dir))
         return None
 
     #TODO - Assign variable to static link so it can be dynamic and read from the self.plainTextEdit.toPlainText() function
